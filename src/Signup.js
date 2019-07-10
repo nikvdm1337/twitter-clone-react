@@ -53,6 +53,7 @@ class Signup extends Component {
 						</div>
 					</div>
 				</div>
+					<a href="https://localhost:2000">Don't have an account? Register now!</a>
 			</div>
 		)
 	}
