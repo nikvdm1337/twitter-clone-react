@@ -33,10 +33,11 @@ class Sidebar extends Component {
 		this.setState({channels})
 		this.props.getMessages(id)
 	}
+
 	// Render
 	render() {
 		return (
-			<div id="sidebar">
+			<div id="sidebar" className="col-3">
 				<h2>{this.state.workspace}</h2>
 				<h3>Hashtags</h3>
 				<ul className="list-unstyled">
@@ -47,6 +48,7 @@ class Sidebar extends Component {
 					}
 				</ul>
 			</div>
+			
 		)
 	}
 }
