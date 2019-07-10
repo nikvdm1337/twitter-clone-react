@@ -16,25 +16,12 @@ class Message extends Component {
 	// Render
 	render() {
 		return (
-			// <div className="message">
-			// 	<span className="author">{this.state.message.author}</span>
-			// 	<span className="date">{this.state.message.date}</span>
-			// 	<div className="body">{this.state.message.body}</div>
-			// </div>
-			<div class="message">
-                    <div class="card">
-                        <div class="card-header">
-						<span className="author">{this.state.message.author}</span>
-						<span className="date">{this.state.message.date}</span>
-                        </div>
-                        <div class="card-body mg">
-                            <h5 class="card-title">#Hashtag</h5>
-                            <p class="card-text">
-							<div className="body">{this.state.message.body}</div>
-							</p>
-                        </div>
-                    </div>
-                </div>
+			<div className="message">
+				<span className="author">{this.state.message.author.name}</span>
+				<span className="date">{this.state.message.date}</span>
+				<div className="body">{this.state.message.body}</div>
+			</div>
+			
 		)
 	}
 }
