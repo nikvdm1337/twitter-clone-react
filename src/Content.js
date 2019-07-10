@@ -13,8 +13,9 @@ class Content extends Component {
 
 	componentWillMount() {
 		axios.get(`http://localhost:2000/api/messages`).then((res) => {
+			console.log('res.data', res.data)
 			this.setState({
-				messages: res.data
+				messages: res.data,
 			})
 		}).catch((err) => {
 			console.log('err', err)
@@ -55,7 +56,8 @@ class Content extends Component {
 	// Render
 	render() {
 		return (
-			<div id="content">
+			<div id="content" className="col-6">
+			<NewMessage createMessage={this.createMessage} />
 				<div id="messages">
 					{
 						this.state.messages.map((m) => {
@@ -63,7 +65,6 @@ class Content extends Component {
 						})
 					}
 				</div>
-				<NewMessage createMessage={this.createMessage} />
 			</div>
 		)
 	}
