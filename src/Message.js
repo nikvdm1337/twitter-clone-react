@@ -17,11 +17,16 @@ class Message extends Component {
 	render() {
 		return (
 			<div className="message">
-				<span className="author">{this.state.message.author.name}</span>
-				<span className="date">{this.state.message.date}</span>
-				<div className="body">{this.state.message.body}</div>
-			</div>
-			
+                    <div className="card">
+                        <div className="card-header">
+						<span className="author">{this.state.message.author}</span>
+						<span className="date">{this.state.message.date}</span>
+                        </div>
+                        <div className="card-body mg">
+                            <p className="card-text"><div className="body">{this.state.message.body}</div></p>
+                        </div>
+                    </div>
+                </div>	
 		)
 	}
 }
