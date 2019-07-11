@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
-
+import './Signup.css'
 class Signup extends Component {
 	// Data
 	state = {
@@ -34,6 +34,7 @@ class Signup extends Component {
 	// Render
 	render() {
 		return (
+		<div id="signup">
 			<div className="row">
 				<div className="col-4 offset-4">
 					<div className="card signup">
@@ -53,8 +54,8 @@ class Signup extends Component {
 						</div>
 					</div>
 				</div>
-					
-			</div>
+			</div>	
+		</div>
 		)
 	}
 }

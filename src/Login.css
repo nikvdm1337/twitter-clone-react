@@ -1,0 +1,10 @@
+.card.signup{
+    margin-top:330px;
+
+}
+
+#login {
+    background-image: url('./img/tortuga.jpg');
+    background-repeat: no-repeat;
+    height:100vh;
+}

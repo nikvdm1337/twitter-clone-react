@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
-
+import './Login.css'
 class Login extends Component {
 	// Data
 	state = {
@@ -40,6 +40,7 @@ class Login extends Component {
 	// Render
 	render() {
 		return (
+			<div id="login">
 			<div className="row">
 				<div className="col-4 offset-4">
 					<div className="card signup">
@@ -60,6 +61,7 @@ class Login extends Component {
 					</div>
 				</div>
 			</div>
+		</div>
 			
 			
 		)

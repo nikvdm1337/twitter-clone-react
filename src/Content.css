@@ -1,6 +1,6 @@
 #content {
     background: #fff;
-    margin-top:30px;
+    margin-top:1px;
 }
 
 #messages {
@@ -30,7 +30,7 @@
 
 .jumbotron-fluid {
     background-image:url('./img/tortuga.jpg');
-    height: 500px;
+    height: 300px;
     object-fit: scale-down;
     background-position: center;
 }
@@ -45,5 +45,9 @@
 }
 
 .btn {
-    background-color: #1EA0F2
+    background-color:#47CBFB
+}
+
+.twitter-nav {
+    background-color: #47CBFB
 }
