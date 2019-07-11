@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import './Content.css'
+import './Message.css'
 import moment from 'moment'
 
 class Message extends Component {
@@ -10,7 +11,7 @@ class Message extends Component {
 	// Functions
 	componentWillMount() {
 		let message = this.state.message
-		message.date = moment(message.date).format('D MMM YYYY - h:mma')
+		message.date = moment(message.date).format('D MMM YYYY')
 		this.setState({message})
 	}
 	// Render
@@ -19,12 +20,11 @@ class Message extends Component {
 			<div className="message">
                     <div className="card">
                         <div className="card-header">
-						<span className="author">{this.state.message.author.name}</span>
+						<span className="author">@{this.state.message.author.name}</span>	
 						<span className="date">{this.state.message.date}</span>
-						<span className="hashtag">#{this.state.message.channel.name}</span>
                         </div>
                         <div className="card-body mg">
-                            <p className="card-text"><div className="body">{this.state.message.body}</div></p>
+                            <div className="card-text"><div className="body">{this.state.message.body} <span className="hashtag" onClick={() => this.props.selectChannel(this.state.channel._id)}>#{this.state.message.channel.name}</span></div></div>
                         </div>
                     </div>
                 </div>	
