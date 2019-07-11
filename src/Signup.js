@@ -40,7 +40,7 @@ class Signup extends Component {
 						<div className="card-body">
 							<form onSubmit={(e) => this.signup(e)}>
 								<div className="form-group">
-									<input type="text" className="form-control" placeholder="Full Name..." value={this.state.name} onChange={(e) => this.changeName(e)} />
+									<input type="text" className="form-control" placeholder="Nickname..." value={this.state.name} onChange={(e) => this.changeName(e)} />
 								</div>
 								<div className="form-group">
 									<input type="email" className="form-control" placeholder="Email..." value={this.state.email} onChange={(e) => this.changeEmail(e)} />
@@ -53,7 +53,7 @@ class Signup extends Component {
 						</div>
 					</div>
 				</div>
-					<a href="https://localhost:2000">Don't have an account? Register now!</a>
+					
 			</div>
 		)
 	}
