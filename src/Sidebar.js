@@ -6,7 +6,6 @@ import axios from 'axios'
 class Sidebar extends Component {
 	// Data
 	state = {
-		workspace: 'Tortuga Twitter',
 		channels: []
 	}
 	// Lifecycle
@@ -15,7 +14,7 @@ class Sidebar extends Component {
 			console.log(res.data)
 			this.setState({
 				channels: res.data
-			})
+			})	
 			console.log('res.data[0]', res.data[0])
 		}).catch((err) => {
 			console.log('err', err)
@@ -36,7 +35,6 @@ class Sidebar extends Component {
 	render() {
 		return (
 			<div id="sidebar" className="col-3">
-				<h2>{this.state.workspace}</h2>
 				<h3>Trends for you</h3>
 				<ul className="list-unstyled">
 					{
