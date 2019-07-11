@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import './NewMessage.css'
 
 class NewMessage extends Component {
 	// Data
@@ -27,7 +28,9 @@ class NewMessage extends Component {
 						this.props.createMessage(e, this.state.text); this.clearMessage()}
 					}>
 					<div className="input-group">
-						<input type="text" className="form-control" placeholder="New Message..." value={this.state.text} onChange={(e) => this.changeText(e)} />
+						<input type="text" className="form-control NewMessage" rows="5" placeholder="Tell the world what you have to say..." 
+						value={this.state.text} 
+						onChange={(e) => this.changeText(e)} />
 						<div className="input-group-append">
 							<button type="submit" className="btn btn-primary">Send</button>
 						</div>
