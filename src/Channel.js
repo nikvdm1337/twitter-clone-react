@@ -2,9 +2,7 @@ import React, {Component} from 'react'
 
 class Channel extends Component {
 	// Data
-	state = {
-		channel: this.props.channel
-	}
+	
 	// Functions
 	componentWillMount() {
 		console.log(this.props)
@@ -13,7 +11,7 @@ class Channel extends Component {
 	// Render
 	render() {
 		return (
-			<li onClick={() => this.props.selectChannel(this.state.channel._id)}># {this.state.channel.name}</li>
+			<li onClick={() => this.props.setChannel(this.props.channelID)}># {this.props.channel.name}</li>
 		)
 	}
 }

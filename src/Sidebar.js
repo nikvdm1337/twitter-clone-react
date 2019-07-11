@@ -22,11 +22,7 @@ class Sidebar extends Component {
 	}
 
 	// Functions
-	selectChannel = (id) => {
-
-		this.props.getMessages(id)
-	}
-
+	
 	// Render
 	render() {
 		return (
@@ -35,7 +31,7 @@ class Sidebar extends Component {
 				<ul className="list-unstyled">
 					{
 						this.state.channels.map((c) => {
-							return <Channel channel={c} key={c._id} selectChannel={this.selectChannel} />
+							return <Channel channel={c} key={c._id} setChannel={this.props.setChannel} channelID={c._id} />
 						})
 					}
 				</ul>

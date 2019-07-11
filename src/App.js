@@ -13,7 +13,7 @@ class App extends Component {
 		channel: ''
 	}
 	// Functions
-	getMessages = (id) => {
+	setChannel = (id) => {
 		this.setState({
 			channel: id
 		})
@@ -29,8 +29,8 @@ class App extends Component {
 				
 				<Jumbotron />
 				<div id="wrap" className="row">
-					<Sidebar getMessages={this.getMessages} />
-					<Content channel={this.state.channel} />
+					<Sidebar setChannel={this.setChannel} />
+					<Content channel={this.state.channel} setChannel={this.setChannel} />
 			</div>
 		</div>
 		)

@@ -75,8 +75,8 @@ class Content extends Component {
 			<NewMessage createMessage={this.createMessage} />
 				<div id="messages">
 					{
-						this.state.messages.map((m) => {
-							return <Message message={m} key={m._id} />
+						this.props.messages.map((m) => {
+							return <Message message={m} key={m._id} setChannel={this.props.setChannel} channel={this.props.channel} />
 						})
 					}
 				</div>
