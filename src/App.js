@@ -4,6 +4,7 @@ import './App.css'
 import Sidebar from './Sidebar'
 import Content from './Content'
 import Jumbotron from './Jumbotron'
+import Logout from './Logout'
 
 class App extends Component {
 	// Data
@@ -21,6 +22,7 @@ class App extends Component {
 		return (
 			<div id="megawrap">
 				<Jumbotron />
+				<Logout />
 				<div id="wrap" className="row">
 					<Sidebar getMessages={this.getMessages} />
 					<Content channel={this.state.channel} />
