@@ -22,8 +22,11 @@ class App extends Component {
 	render() {
 		return (
 			<div id="megawrap">
-				<Logout />
-				<Home />
+			<nav className="navbar navbar-dark bg-primary twitter-nav">
+			<Home />
+			<Logout />
+			</nav>
+				
 				<Jumbotron />
 				<div id="wrap" className="row">
 					<Sidebar getMessages={this.getMessages} />
