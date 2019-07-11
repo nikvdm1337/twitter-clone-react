@@ -1,0 +1,9 @@
+.NewMessage {
+    height: 80px;
+    font-weight:bold;
+    float: right;
+}
+
+.btn {
+    background-color: #1EA0F2
+}
