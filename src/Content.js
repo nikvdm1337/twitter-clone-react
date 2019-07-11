@@ -6,9 +6,13 @@ import axios from 'axios'
 
 class Content extends Component {
 	// Data
-	state = {
-		messages: []
+	constructor() {
+		super();
+		this.state = {
+			messages:[],
+		};
 	}
+	
 	// Functions
 
 	selectChannel = () => {
@@ -34,7 +38,7 @@ class Content extends Component {
 	}
 
 	componentWillReceiveProps(props) {
-		axios.get(`http://localhost:2000/api/messages?channel=${props.channel}`).then((res) => {
+		axios.get(`http://localhost:2000/api/messages?channel=${this.props.channel}`).then((res) => {
 			this.setState({
 				messages: res.data
 			})
@@ -70,12 +74,13 @@ class Content extends Component {
 
 	// Render
 	render() {
+		console.log('channel content', this.props.channel)
 		return (
 			<div id="content" className="col-6">
 			<NewMessage createMessage={this.createMessage} />
 				<div id="messages">
 					{
-						this.props.messages.map((m) => {
+						this.state.messages.map((m) => {
 							return <Message message={m} key={m._id} setChannel={this.props.setChannel} channel={this.props.channel} />
 						})
 					}

@@ -10,6 +10,7 @@ class Message extends Component {
 	
 	// Render
 	render() {
+		console.log('channel', this.props.channel)
 		return (
 			<div className="message">
                     <div className="card">
@@ -18,7 +19,7 @@ class Message extends Component {
 						<span className="date">{moment(this.props.message.date).format('D MMM YY hh:m A')}</span>
                         </div>
                         <div className="card-body mg">
-                            <div className="card-text"><div className="body">{this.props.message.body} <span className="hashtag" onClick={() => this.props.setChannel(this.props.channel._id)}>#{this.props.message.channel.name}</span></div></div>
+                            <div className="card-text"><div className="body">{this.props.message.body} <span className="hashtag" onClick={() => this.props.setChannel(this.props.message.channel._id)}>#{this.props.message.channel.name}</span></div></div>
                         </div>
                     </div>
                 </div>	
