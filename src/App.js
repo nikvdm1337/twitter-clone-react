@@ -8,15 +8,21 @@ import Logout from './Logout'
 import Home from './Home'
 
 class App extends Component {
-	// Data
-	state = {
-		channel: ''
+
+	constructor() {
+		super();
+		this.state = {
+			channel:'',
+		};
 	}
+	// Data
+	
 	// Functions
 	setChannel = (id) => {
 		this.setState({
 			channel: id
 		})
+		console.log('pressed link')
 	}
 	// Render
 	render() {
