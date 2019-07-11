@@ -13,11 +13,9 @@ class Sidebar extends Component {
 	componentDidMount() {
 		axios.get(`http://localhost:2000/api/channels`).then((res) => {
 			console.log(res.data)
-			res.data[0].active = true
 			this.setState({
 				channels: res.data
 			})
-			this.selectChannel(res.data[0]._id)
 			console.log('res.data[0]', res.data[0])
 		}).catch((err) => {
 			console.log('err', err)
@@ -39,7 +37,7 @@ class Sidebar extends Component {
 		return (
 			<div id="sidebar" className="col-3">
 				<h2>{this.state.workspace}</h2>
-				<h3>Hashtags</h3>
+				<h3>Trends for you</h3>
 				<ul className="list-unstyled">
 					{
 						this.state.channels.map((c) => {
