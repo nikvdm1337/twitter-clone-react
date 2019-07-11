@@ -11,6 +11,17 @@ class Content extends Component {
 	}
 	// Functions
 
+	selectChannel = () => {
+		axios.get(`http://localhost:2000/api/messages`).then((res) => {
+			console.log('res.data', res.data)
+			this.setState({
+				messages: res.data,
+			})
+		}).catch((err) => {
+			console.log('err', err)
+		})
+	}
+
 	componentWillMount() {
 		axios.get(`http://localhost:2000/api/messages`).then((res) => {
 			console.log('res.data', res.data)
@@ -51,6 +62,10 @@ class Content extends Component {
 		}).catch((err) => {
 			console.log('err', err)
 		})
+	}
+
+	selectChannel = (id) => {
+		this.props.getMessages(id)
 	}
 
 	// Render

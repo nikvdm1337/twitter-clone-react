@@ -15,7 +15,7 @@ class Sidebar extends Component {
 			this.setState({
 				channels: res.data
 			})	
-			console.log('res.data[0]', res.data[0])
+			
 		}).catch((err) => {
 			console.log('err', err)
 		})
@@ -23,11 +23,7 @@ class Sidebar extends Component {
 
 	// Functions
 	selectChannel = (id) => {
-		let channels = this.state.channels
-		channels.forEach((c) => delete c.active)
-		let channel = channels.find((c) => c._id === id)
-		channel.active = true
-		this.setState({channels})
+
 		this.props.getMessages(id)
 	}
 

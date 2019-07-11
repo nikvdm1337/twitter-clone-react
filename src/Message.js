@@ -6,12 +6,13 @@ import moment from 'moment'
 class Message extends Component {
 	// Data
 	state = {
-		message: this.props.message
+		message: this.props.message,
+		channel: this.props.channel
 	}
 	// Functions
 	componentWillMount() {
 		let message = this.state.message
-		message.date = moment(message.date).format('D MMM YYYY')
+		message.date = moment(message.date).format('D MMM YY hh:m A')
 		this.setState({message})
 	}
 	// Render
@@ -24,7 +25,7 @@ class Message extends Component {
 						<span className="date">{this.state.message.date}</span>
                         </div>
                         <div className="card-body mg">
-                            <div className="card-text"><div className="body">{this.state.message.body} <span className="hashtag" onClick={() => this.props.selectChannel(this.state.channel._id)}>#{this.state.message.channel.name}</span></div></div>
+                            <div className="card-text"><div className="body">{this.state.message.body} <span className="hashtag" onClick={() => this.props.channel(this.state.channel._id)}>#{this.state.message.channel.name}</span></div></div>
                         </div>
                     </div>
                 </div>	
