@@ -53,7 +53,9 @@ class Login extends Component {
 								</div>
 								<div className="error">{this.state.error}</div>
 								<button type="submit" className="btn btn-success">Login</button>
+								
 							</form>
+							<a href="http://localhost:3000/signup">Don't have an account? Register now!</a>
 						</div>
 					</div>
 				</div>
