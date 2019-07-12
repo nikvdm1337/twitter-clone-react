@@ -74,7 +74,6 @@ class Content extends Component {
 
 	// Render
 	render() {
-		console.log('channel content', this.props.channel)
 		return (
 			<div id="content" className="col-6">
 			<NewMessage createMessage={this.createMessage} />
