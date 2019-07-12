@@ -37,8 +37,8 @@ class Content extends Component {
 		})
 	}
 
-	componentWillReceiveProps(props) {
-		axios.get(`${process.env.REACT_APP_API}/messages?channel=${this.props.channel}`).then((res) => {
+	componentWillReceiveProps() {
+		axios.get(`${process.env.REACT_APP_API}/api/messages?channel=${this.props.channel}`).then((res) => {
 			this.setState({
 				messages: res.data
 			})

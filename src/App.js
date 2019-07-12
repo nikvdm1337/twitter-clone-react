@@ -22,7 +22,6 @@ class App extends Component {
 		this.setState({
 			channel: id
 		})
-		console.log('pressed link')
 	}
 	// Render
 	render() {
