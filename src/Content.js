@@ -16,7 +16,7 @@ class Content extends Component {
 	// Functions
 
 	selectChannel = () => {
-		axios.get(`http://localhost:2000/api/messages`).then((res) => {
+		axios.get(`${process.env.REACT_APP_API}/api/messages`).then((res) => {
 			console.log('res.data', res.data)
 			this.setState({
 				messages: res.data,
@@ -27,7 +27,7 @@ class Content extends Component {
 	}
 
 	componentWillMount() {
-		axios.get(`http://localhost:2000/api/messages`).then((res) => {
+		axios.get(`${process.env.REACT_APP_API}/api/messages`).then((res) => {
 			console.log('res.data', res.data)
 			this.setState({
 				messages: res.data,
@@ -38,7 +38,7 @@ class Content extends Component {
 	}
 
 	componentWillReceiveProps(props) {
-		axios.get(`http://localhost:2000/api/messages?channel=${this.props.channel}`).then((res) => {
+		axios.get(`${process.env.REACT_APP_API}/messages?channel=${this.props.channel}`).then((res) => {
 			this.setState({
 				messages: res.data
 			})
@@ -54,7 +54,7 @@ class Content extends Component {
 			channel: this.props.channel
 		}
 		axios.post(
-			`http://localhost:2000/api/messages`,
+			`${process.env.REACT_APP_API}/api/messages`,
 			message,
 			{headers: {
 				Authorization: `Bearer ${localStorage.getItem('token')}`

@@ -10,7 +10,7 @@ class Sidebar extends Component {
 	}
 	// Lifecycle
 	componentDidMount() {
-		axios.get(`http://localhost:2000/api/channels`).then((res) => {
+		axios.get(`${process.env.REACT_APP_API}/api/channels`).then((res) => {
 			console.log(res.data)
 			this.setState({
 				channels: res.data
